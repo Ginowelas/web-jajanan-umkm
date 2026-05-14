@@ -3,7 +3,11 @@
 import { motion } from "framer-motion";
 import { whatsappUrl } from "@/data/menu";
 
-export function Hero() {
+type HeroProps = {
+  onCartOpen?: () => void;
+};
+
+export function Hero({ onCartOpen }: HeroProps) {
   return (
     <section
       id="home"
@@ -34,12 +38,25 @@ export function Hero() {
             >
               Pesan via WhatsApp
             </a>
-            <a
-              href="#menu"
+            <button
+              type="button"
+              onClick={onCartOpen}
               className="rounded-full border border-cocoa/20 bg-white/70 px-7 py-4 text-center text-base font-semibold text-cocoa shadow-soft backdrop-blur transition hover:-translate-y-1 hover:scale-[1.02] hover:border-leaf hover:text-leaf"
             >
-              Lihat Menu
-            </a>
+              Buka Keranjang
+            </button>
+          </div>
+          <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
+            {[
+              ["8+", "Menu favorit"],
+              ["20+", "Snack box"],
+              ["Harian", "Fresh dibuat"]
+            ].map(([value, label]) => (
+              <div key={label} className="rounded-2xl border border-white/70 bg-white/60 p-4 shadow-soft backdrop-blur">
+                <p className="text-xl font-bold text-leaf">{value}</p>
+                <p className="mt-1 text-xs font-semibold text-cocoa">{label}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
 

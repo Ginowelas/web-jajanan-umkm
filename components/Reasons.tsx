@@ -4,10 +4,22 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const reasons = [
-  "Fresh dibuat harian",
-  "Tanpa pengawet",
-  "Cocok untuk acara",
-  "Bisa custom isi snack box"
+  {
+    title: "Fresh dibuat harian",
+    text: "Produksi dijadwalkan sesuai pesanan agar tekstur dan aroma tetap terjaga."
+  },
+  {
+    title: "Tanpa pengawet",
+    text: "Mengandalkan bahan pilihan dan proses rumahan yang bersih."
+  },
+  {
+    title: "Cocok untuk acara",
+    text: "Kemasan rapi untuk arisan, hajatan, kantor, dan acara keluarga."
+  },
+  {
+    title: "Bisa custom isi snack box",
+    text: "Isi box bisa disesuaikan dengan budget, tema acara, dan stok harian."
+  }
 ];
 
 export function Reasons() {
@@ -22,7 +34,7 @@ export function Reasons() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason, index) => (
             <motion.div
-              key={reason}
+              key={reason.title}
               initial={{ y: 28, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.35 }}
@@ -32,10 +44,8 @@ export function Reasons() {
               <span className="mb-5 grid size-11 place-items-center rounded-xl bg-leaf text-base font-bold text-white">
                 {index + 1}
               </span>
-              <h3 className="text-lg font-semibold text-charcoal">{reason}</h3>
-              <p className="mt-3 text-sm leading-6 text-cocoa">
-                Pesanan dikerjakan teliti agar rasa dan tampilannya konsisten sampai ke tangan pelanggan.
-              </p>
+              <h3 className="text-lg font-semibold text-charcoal">{reason.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-cocoa">{reason.text}</p>
             </motion.div>
           ))}
         </div>

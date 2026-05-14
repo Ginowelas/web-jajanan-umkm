@@ -1,60 +1,189 @@
-export const whatsappUrl = "https://wa.me/6281226532069";
+export const whatsappNumber = "6281226532069";
+export const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+
+export const storeInfo = {
+  name: "Jajanan Pagi",
+  address: "Jl. Contoh UMKM No. 12, Jakarta",
+  instagram: "@jajananpagi",
+  whatsappLabel: "0812-2653-2069",
+  minimumOrder: "Minimal order menyesuaikan jenis jajanan dan tanggal acara."
+};
+
+export type MenuCategory = "Semua" | "Gorengan" | "Kue Basah" | "Ketan" | "Snack Box";
 
 export type MenuItem = {
+  id: string;
   name: string;
-  price: string;
+  category: Exclude<MenuCategory, "Semua">;
+  priceValue: number;
+  unit: string;
   description: string;
   image: string;
+  badge?: string;
+  minOrder?: string;
 };
+
+export type PackageItem = {
+  id: string;
+  name: string;
+  priceValue: number;
+  description: string;
+  items: string[];
+  badge: string;
+};
+
+export const categories: MenuCategory[] = ["Semua", "Gorengan", "Kue Basah", "Ketan", "Snack Box"];
+
+export function formatPrice(value: number) {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    maximumFractionDigits: 0
+  }).format(value);
+}
 
 export const menuItems: MenuItem[] = [
   {
+    id: "risol-mayo",
     name: "Risol Mayo",
-    price: "Rp2.500 / pcs",
+    category: "Gorengan",
+    priceValue: 2500,
+    unit: "pcs",
     description: "Risol renyah berisi sosis, telur, dan mayones creamy lumer di setiap gigitan.",
-    image: "/images/risol-mayo.jpg"
+    image: "/images/risol-mayo.jpg",
+    badge: "Best Seller",
+    minOrder: "Min. 10 pcs"
   },
   {
+    id: "lemet",
     name: "Lemet",
-    price: "Rp1.500 / pcs",
-    description: "Lemet tradisional berbahan singkong parut dan gula merah, dibungkus daun pisang dengan rasa manis legit serta aroma khas yang menggugah selera.",
-    image: "/images/lemet.png"
+    category: "Kue Basah",
+    priceValue: 1500,
+    unit: "pcs",
+    description: "Singkong parut dan gula merah dibungkus daun pisang dengan rasa manis legit.",
+    image: "/images/lemet.png",
+    minOrder: "Min. 10 pcs"
   },
   {
+    id: "pastel",
     name: "Pastel",
-    price: "Rp2.500 / pcs",
-    description: "Pastel gurih berkulit renyah dengan isian sayuran dan telur yang lezat, cocok dinikmati sebagai camilan maupun teman santai.",
-    image: "/images/pastel.png"
+    category: "Gorengan",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Pastel gurih berkulit renyah dengan isian sayuran dan telur yang lezat.",
+    image: "/images/pastel.png",
+    badge: "Favorit"
   },
   {
+    id: "arem-arem",
     name: "Arem-arem",
-    price: "Rp2.000 / pcs",
-    description: "Arem-arem gurih berbahan nasi lembut dengan isian ayam dan sayuran berbumbu khas, dibungkus daun pisang yang harum dan menggugah selera.",
+    category: "Snack Box",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Nasi lembut berisi ayam dan sayuran berbumbu, dibungkus daun pisang harum.",
     image: "/images/arem-arem.jpg"
   },
   {
+    id: "martabak-mini",
     name: "Martabak Mini",
-    price: "Rp2.000 / pcs",
-    description: "Martabak mini renyah dengan isian telur dan daun bawang berbumbu gurih, pas dinikmati hangat sebagai camilan favorit keluarga.",
+    category: "Gorengan",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Martabak mini renyah dengan isian telur dan daun bawang berbumbu gurih.",
     image: "/images/martabak.jpg"
   },
   {
+    id: "semar-mendem",
     name: "Semar Mendem",
-    price: "Rp2.000 / pcs",
-    description: "Semar Mendem gurih berisi nasi ketan lembut, dibalut dadar telur tipis dengan cita rasa khas tradisional yang nikmat.",
-    image: "/images/semar-mendem.jpg"
+    category: "Ketan",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Ketan lembut dibalut dadar telur tipis dengan cita rasa tradisional yang nikmat.",
+    image: "/images/semar-mendem.jpg",
+    minOrder: "Min. 10 pcs"
   },
   {
+    id: "bengawan-solo",
     name: "Bengawan Solo",
-    price: "Rp2.500 / pcs",
-    description: "Kue Bengawan Solo lembut dengan perpaduan rasa manis legit dan taburan kelapa gurih, menghadirkan cita rasa tradisional yang khas dan menggugah selera.",
+    category: "Kue Basah",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Kue lembut dengan rasa manis legit dan taburan kelapa gurih.",
     image: "/images/bengawan-solo.jpg"
   },
   {
+    id: "klepon",
     name: "Klepon",
-    price: "Rp2.000 / pcs",
-    description: "Klepon kenyal berbahan tepung ketan dengan isian gula merah lumer dan balutan kelapa parut gurih, manis legit di setiap gigitan.",
-    image: "/images/klepon.jpg"
+    category: "Kue Basah",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Klepon kenyal dengan isian gula merah lumer dan balutan kelapa parut.",
+    image: "/images/klepon.jpg",
+    badge: "Fresh Harian"
+  }
+];
+
+export const snackPackages: PackageItem[] = [
+  {
+    id: "paket-arisan",
+    name: "Paket Arisan",
+    priceValue: 18000,
+    description: "Komposisi ringan untuk suguhan tamu dan acara keluarga.",
+    items: ["3 jajanan pilihan", "Box kraft premium", "Label nama acara"],
+    badge: "Populer"
+  },
+  {
+    id: "paket-kantor",
+    name: "Paket Kantor",
+    priceValue: 22000,
+    description: "Paket rapi untuk meeting, seminar kecil, dan konsumsi kantor.",
+    items: ["4 jajanan pilihan", "Sendok/tisu", "Kemasan siap distribusi"],
+    badge: "Rapi"
+  },
+  {
+    id: "paket-hajatan",
+    name: "Paket Hajatan",
+    priceValue: 28000,
+    description: "Isi lebih lengkap untuk acara besar dengan tampilan premium.",
+    items: ["5 jajanan pilihan", "Custom isi box", "Bisa tambah kartu ucapan"],
+    badge: "Custom"
+  }
+];
+
+export const testimonials = [
+  {
+    name: "Ibu Rani",
+    event: "Arisan keluarga",
+    quote: "Snack box-nya rapi, rasanya fresh, dan tamu banyak yang tanya pesan di mana."
+  },
+  {
+    name: "Pak Dimas",
+    event: "Meeting kantor",
+    quote: "Pengiriman tepat waktu, pilihan menunya pas, dan tampilannya cocok untuk acara kantor."
+  },
+  {
+    name: "Ibu Sinta",
+    event: "Hajatan rumah",
+    quote: "Bisa custom isi sesuai budget. Komunikasinya enak dan hasilnya memuaskan."
+  }
+];
+
+export const faqs = [
+  {
+    question: "Berapa minimal order?",
+    answer: "Minimal order tergantung jenis produk. Untuk snack box biasanya mulai dari 20 box."
+  },
+  {
+    question: "Apakah bisa custom isi snack box?",
+    answer: "Bisa. Isi box dapat disesuaikan dengan budget, acara, dan stok produksi harian."
+  },
+  {
+    question: "Pesanan sebaiknya H-berapa?",
+    answer: "Untuk acara kecil disarankan H-2. Untuk pesanan besar lebih aman H-5 sampai H-7."
+  },
+  {
+    question: "Apakah tersedia pengiriman?",
+    answer: "Tersedia untuk area tertentu. Detail ongkir akan dikonfirmasi melalui WhatsApp."
   }
 ];
 

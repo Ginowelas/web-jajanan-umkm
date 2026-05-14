@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jajanan Pagi | Menu Jajanan Pasar Tradisional",
+  title: "Jajanan Pagi | Order Jajanan Pasar dan Snack Box",
   description:
-    "Jajanan pasar tradisional fresh setiap hari untuk snack box, arisan, hajatan, kantor, dan acara keluarga.",
+    "Pesan jajanan pasar tradisional dan snack box UMKM premium melalui WhatsApp. Fresh harian untuk arisan, hajatan, kantor, dan acara keluarga.",
   keywords: [
     "jajanan pasar",
     "snack box",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     "risoles"
   ],
   openGraph: {
-    title: "Jajanan Pagi | Jajanan Pasar Fresh Setiap Hari",
-    description: "Pesan jajanan pasar untuk snack box, arisan, hajatan, kantor, dan acara keluarga.",
+    title: "Jajanan Pagi | Order Jajanan Pasar dan Snack Box",
+    description: "Pesan jajanan pasar dan snack box fresh harian untuk arisan, hajatan, kantor, dan acara keluarga.",
     type: "website",
     locale: "id_ID"
   }

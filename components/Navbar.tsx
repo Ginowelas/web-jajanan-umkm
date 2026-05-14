@@ -6,11 +6,17 @@ import { whatsappUrl } from "@/data/menu";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Menu", href: "#menu" },
+  { label: "Paket", href: "#paket" },
   { label: "Tentang", href: "#tentang" },
   { label: "Kontak", href: "#kontak" }
 ];
 
-export function Navbar() {
+type NavbarProps = {
+  cartCount?: number;
+  onCartOpen?: () => void;
+};
+
+export function Navbar({ cartCount = 0, onCartOpen }: NavbarProps) {
   return (
     <motion.header
       initial={false}
@@ -36,14 +42,28 @@ export function Navbar() {
             </a>
           ))}
         </div>
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-full bg-charcoal px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-leaf"
-        >
-          WhatsApp
-        </a>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={onCartOpen}
+            className="relative rounded-full border border-cocoa/10 bg-white px-4 py-2 text-sm font-semibold text-cocoa shadow-sm transition hover:-translate-y-0.5 hover:border-leaf hover:text-leaf"
+          >
+            Keranjang
+            {cartCount > 0 ? (
+              <span className="absolute -right-2 -top-2 grid size-6 place-items-center rounded-full bg-leaf text-xs font-bold text-white">
+                {cartCount}
+              </span>
+            ) : null}
+          </button>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden rounded-full bg-charcoal px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-leaf sm:inline-flex"
+          >
+            WhatsApp
+          </a>
+        </div>
       </nav>
     </motion.header>
   );
