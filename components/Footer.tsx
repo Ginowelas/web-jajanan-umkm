@@ -7,7 +7,7 @@ export function Footer() {
         <div>
           <h2 className="text-2xl font-semibold">{storeInfo.name}</h2>
           <p className="mt-4 max-w-md leading-7 text-white/72">
-            Jajanan pasar tradisional untuk snack box, arisan, hajatan, kantor, dan acara keluarga.
+            Jajanan pasar tradisional & Nasi box untuk arisan, hajatan, kantor, dan acara keluarga.
           </p>
         </div>
         <div>

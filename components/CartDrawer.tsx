@@ -46,7 +46,7 @@ function buildOrderUrl(cartLines: CartLine[], total: number, customer: CustomerF
     customer.name ? `Nama: ${customer.name}` : "Nama:",
     customer.phone ? `No. HP: ${customer.phone}` : "No. HP:",
     customer.date ? `Tanggal acara/ambil: ${customer.date}` : "Tanggal acara/ambil:",
-    customer.address ? `Alamat: ${customer.address}` : "Alamat:",
+    customer.address ? `Alamat: ${customer.address}` : "Alamat lengkap:",
     customer.note ? `Catatan: ${customer.note}` : "Catatan:"
   ].join("\n");
 

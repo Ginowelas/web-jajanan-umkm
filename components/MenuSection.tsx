@@ -36,8 +36,8 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onOpenCart }: Men
     <section id="menu" className="bg-white px-4 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Menu Favorit"
-          title="Pilih jajanan, masuk keranjang, checkout ke WhatsApp"
+          eyebrow="Mana Menu Favoritmu?"
+          title="Pilih jajanan, masukkan keranjang, checkout langsung ke WhatsApp"
           description="Harga otomatis dihitung dan detail pesanan akan tersusun rapi saat dikirim ke WhatsApp."
         />
 
@@ -62,7 +62,7 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onOpenCart }: Men
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Cari menu"
+              placeholder="Cari menu disini"
               className="min-h-11 rounded-full border border-cocoa/10 bg-white px-5 text-sm text-charcoal outline-none transition placeholder:text-cocoa/55 focus:border-leaf sm:w-64"
             />
             <button
@@ -70,7 +70,7 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onOpenCart }: Men
               onClick={onOpenCart}
               className="rounded-full bg-charcoal px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-leaf"
             >
-              Lihat Keranjang
+              Lihat Pesananmu Disini
             </button>
           </div>
         </div>

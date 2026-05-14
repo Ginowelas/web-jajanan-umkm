@@ -17,8 +17,8 @@ const reasons = [
     text: "Kemasan rapi untuk arisan, hajatan, kantor, dan acara keluarga."
   },
   {
-    title: "Bisa custom isi snack box",
-    text: "Isi box bisa disesuaikan dengan budget, tema acara, dan stok harian."
+    title: "Bisa custom isi snack & nasi box",
+    text: "Isi bisa disesuaikan dengan budget, tema acara, dan stok harian."
   }
 ];
 
@@ -27,7 +27,7 @@ export function Reasons() {
     <section id="tentang" className="bg-cream px-4 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Kenapa Pilih Kami?"
+          eyebrow="Kenapa Pilih Warung Mak Menuk?"
           title="Rasa rumahan dengan tampilan yang layak untuk acara premium"
           description="Kami menjaga rasa, kerapian kemasan, dan fleksibilitas pesanan untuk kebutuhan pribadi maupun acara besar."
         />

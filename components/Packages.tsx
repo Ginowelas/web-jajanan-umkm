@@ -14,7 +14,7 @@ export function Packages() {
     <section id="paket" className="bg-cream px-4 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Paket Snack Box"
+          eyebrow="Paket Snack & Nasi Box"
           title="Paket siap acara dengan isi yang bisa disesuaikan"
           description="Pilih paket awal sebagai gambaran budget, lalu konfirmasi final melalui WhatsApp."
         />

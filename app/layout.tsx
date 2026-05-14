@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jajanan Pagi | Order Jajanan Pasar dan Snack Box",
+  title: "Warung Mak Menuk | Order Jajanan Pasar dan Nasi Box",
   description:
-    "Pesan jajanan pasar tradisional dan snack box UMKM premium melalui WhatsApp. Fresh harian untuk arisan, hajatan, kantor, dan acara keluarga.",
+    "Pesan jajanan pasar tradisional dan Nasi box UMKM premium melalui WhatsApp. Fresh harian untuk arisan, hajatan, kantor, dan acara keluarga.",
   keywords: [
     "jajanan pasar",
     "snack box",

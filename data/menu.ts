@@ -2,14 +2,14 @@ export const whatsappNumber = "6281226532069";
 export const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
 export const storeInfo = {
-  name: "Jajanan Pagi",
-  address: "Jl. Contoh UMKM No. 12, Jakarta",
-  instagram: "@jajananpagi",
+  name: "Warung Mak Menuk",
+  address: "Wonosidi Lor, RT 007/RW 012, Wates, Kulon Progo",
+  instagram: "@warungmakmenuk",
   whatsappLabel: "0812-2653-2069",
   minimumOrder: "Minimal order menyesuaikan jenis jajanan dan tanggal acara."
 };
 
-export type MenuCategory = "Semua" | "Gorengan" | "Kue Basah" | "Ketan" | "Snack Box";
+export type MenuCategory = "Semua" | "Gorengan" | "Kue Basah" | "Ketan" | "Nasi Box";
 
 export type MenuItem = {
   id: string;
@@ -32,7 +32,7 @@ export type PackageItem = {
   badge: string;
 };
 
-export const categories: MenuCategory[] = ["Semua", "Gorengan", "Kue Basah", "Ketan", "Snack Box"];
+export const categories: MenuCategory[] = ["Semua", "Gorengan", "Kue Basah", "Ketan", "Nasi Box"];
 
 export function formatPrice(value: number) {
   return new Intl.NumberFormat("id-ID", {
@@ -52,7 +52,7 @@ export const menuItems: MenuItem[] = [
     description: "Risol renyah berisi sosis, telur, dan mayones creamy lumer di setiap gigitan.",
     image: "/images/risol-mayo.jpg",
     badge: "Best Seller",
-    minOrder: "Min. 10 pcs"
+    minOrder: "Min. 20 pcs"
   },
   {
     id: "lemet",
@@ -62,7 +62,8 @@ export const menuItems: MenuItem[] = [
     unit: "pcs",
     description: "Singkong parut dan gula merah dibungkus daun pisang dengan rasa manis legit.",
     image: "/images/lemet.png",
-    minOrder: "Min. 10 pcs"
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
   },
   {
     id: "pastel",
@@ -72,16 +73,19 @@ export const menuItems: MenuItem[] = [
     unit: "pcs",
     description: "Pastel gurih berkulit renyah dengan isian sayuran dan telur yang lezat.",
     image: "/images/pastel.png",
-    badge: "Favorit"
+    badge: "Favorit",
+    minOrder: "Min. 20 pcs"
   },
   {
     id: "arem-arem",
     name: "Arem-arem",
-    category: "Snack Box",
+    category: "Nasi Box",
     priceValue: 2000,
     unit: "pcs",
     description: "Nasi lembut berisi ayam dan sayuran berbumbu, dibungkus daun pisang harum.",
-    image: "/images/arem-arem.jpg"
+    image: "/images/arem-arem.jpg",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
   },
   {
     id: "martabak-mini",
@@ -90,7 +94,9 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Martabak mini renyah dengan isian telur dan daun bawang berbumbu gurih.",
-    image: "/images/martabak.jpg"
+    image: "/images/martabak.jpg",
+    badge: "Paling Banyak Disukai",
+    minOrder: "Min. 20 pcs"
   },
   {
     id: "semar-mendem",
@@ -100,7 +106,8 @@ export const menuItems: MenuItem[] = [
     unit: "pcs",
     description: "Ketan lembut dibalut dadar telur tipis dengan cita rasa tradisional yang nikmat.",
     image: "/images/semar-mendem.jpg",
-    minOrder: "Min. 10 pcs"
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
   },
   {
     id: "bengawan-solo",
@@ -109,7 +116,9 @@ export const menuItems: MenuItem[] = [
     priceValue: 2500,
     unit: "pcs",
     description: "Kue lembut dengan rasa manis legit dan taburan kelapa gurih.",
-    image: "/images/bengawan-solo.jpg"
+    image: "/images/bengawan-solo.jpg",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
   },
   {
     id: "klepon",
@@ -119,7 +128,8 @@ export const menuItems: MenuItem[] = [
     unit: "pcs",
     description: "Klepon kenyal dengan isian gula merah lumer dan balutan kelapa parut.",
     image: "/images/klepon.jpg",
-    badge: "Fresh Harian"
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
   }
 ];
 

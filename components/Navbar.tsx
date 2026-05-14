@@ -29,7 +29,7 @@ export function Navbar({ cartCount = 0, onCartOpen }: NavbarProps) {
           <span className="grid size-10 place-items-center rounded-xl bg-leaf text-sm font-bold text-white shadow-glow">
             JP
           </span>
-          <span className="text-base font-semibold text-charcoal sm:text-lg">Jajanan Pagi</span>
+          <span className="text-base font-semibold text-charcoal sm:text-lg">Warung Mak Menuk</span>
         </a>
         <div className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (

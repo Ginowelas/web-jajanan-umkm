@@ -21,13 +21,13 @@ export function Hero({ onCartOpen }: HeroProps) {
           className="max-w-3xl"
         >
           <p className="mb-5 inline-flex rounded-full border border-leaf/15 bg-white/70 px-4 py-2 text-sm font-semibold text-leaf shadow-soft backdrop-blur">
-            Dibuat hangat untuk momen spesial
+            Dibuat hangat dan Fresh untuk momen yang spesial
           </p>
           <h1 className="max-w-4xl text-5xl font-semibold leading-tight text-charcoal sm:text-6xl lg:text-7xl">
-            Jajanan Pasar Tradisional, Fresh Setiap Hari
+            Jajanan Pasar Tradisional & Nasi Box, Fresh Setiap Hari
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-cocoa sm:text-xl">
-            Menerima pesanan snack box, arisan, hajatan, kantor, dan acara keluarga.
+            Menerima pesanan snack & nasi box untuk arisan, hajatan, kantor, dan acara keluarga.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -36,21 +36,21 @@ export function Hero({ onCartOpen }: HeroProps) {
               rel="noreferrer"
               className="rounded-full bg-leaf px-7 py-4 text-center text-base font-semibold text-white shadow-glow transition hover:-translate-y-1 hover:scale-[1.02] hover:bg-charcoal"
             >
-              Pesan via WhatsApp
+              Pesan via WhatsApp Sekarang!
             </a>
             <button
               type="button"
               onClick={onCartOpen}
               className="rounded-full border border-cocoa/20 bg-white/70 px-7 py-4 text-center text-base font-semibold text-cocoa shadow-soft backdrop-blur transition hover:-translate-y-1 hover:scale-[1.02] hover:border-leaf hover:text-leaf"
             >
-              Buka Keranjang
+              Buka Keranjang Disini
             </button>
           </div>
           <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
             {[
-              ["8+", "Menu favorit"],
-              ["20+", "Snack box"],
-              ["Harian", "Fresh dibuat"]
+              ["99+", "Menu favorit"],
+              ["99+", "Snack dan Nasi Box"],
+              ["Fresh", "Setiap Hari"]
             ].map(([value, label]) => (
               <div key={label} className="rounded-2xl border border-white/70 bg-white/60 p-4 shadow-soft backdrop-blur">
                 <p className="text-xl font-bold text-leaf">{value}</p>
