@@ -61,7 +61,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 1500,
     unit: "pcs",
     description: "Singkong parut dan gula merah dibungkus daun pisang dengan rasa manis legit.",
-    image: "/images/lemet.png",
+    image: "/images/lemet.jpg",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -130,7 +130,62 @@ export const menuItems: MenuItem[] = [
     image: "/images/klepon.jpg",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
-  }
+  },
+  {
+    id: "donat-meses",
+    name: "Donat Meses",
+    category: "Gorengan",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Donat lembut dengan lapisan cokelat manis dan taburan meses melimpah, menghadirkan rasa klasik yang lezat dan bikin nagih.",
+    image: "/images/donat-meses.jpg",
+    badge: "Best Seller",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "kroket-kentang",
+    name: "Kroket Kentang",
+    category: "Gorengan",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Kroket kentang renyah dengan isian sayuran berbumbu gurih, lembut di dalam dan nikmat disantap hangat kapan saja.",
+    image: "/images/kroket.jpg",
+    badge: "Best Seller",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "dadar-gulung-keju",
+    name: "Dadar Gulung Keju",
+    category: "Kue Basah",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Dadar gulung pandan yang lembut dengan taburan keju gurih, perpaduan manis dan lezat yang cocok dinikmati kapan saja.",
+    image: "/images/dadar-gulung-keju.jpg",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "kue-lapis",
+    name: "Kue Lapis",
+    category: "Kue Basah",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Kue lapis lembut dengan tekstur kenyal dan rasa manis yang pas, hadir dengan aroma pandan khas yang menggugah selera.",
+    image: "/images/lapis.jpg",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "kue-apem",
+    name: "Kue Apem",
+    category: "Kue Basah",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Apem lembut dengan rasa manis khas dan aroma harum yang menggoda, cocok dinikmati sebagai camilan tradisional kapan saja.",
+    image: "/images/apem.jpg",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
 ];
 
 export const snackPackages: PackageItem[] = [
