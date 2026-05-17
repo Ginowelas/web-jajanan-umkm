@@ -26,11 +26,11 @@ export function Navbar({ cartCount = 0, onCartOpen }: NavbarProps) {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/70 bg-white/72 px-4 py-3 shadow-soft backdrop-blur-xl sm:px-6">
         <a href="#home" className="flex items-center gap-3">
-          <span className="grid size-12 overflow-hidden rounded-full bg-white shadow-glow">
+          <span className="grid h-14 w-14 shrink-0 overflow-hidden rounded-full bg-white shadow-glow">
             <img
-              src="/images/logo-warung-mak-menuk.png"
+              src="/images/logo-warung-mak-menuk-header.png"
               alt="Logo Warung Mak Menuk"
-              className="size-full object-cover"
+              className="h-full w-full object-cover"
             />
           </span>
           <span className="text-base font-semibold text-charcoal sm:text-lg">Warung Mak Menuk</span>
