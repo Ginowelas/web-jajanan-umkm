@@ -1,10 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { ImageLightbox } from "@/components/ImageLightbox";
 import { galleryImages } from "@/data/menu";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export function Gallery() {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
   return (
     <section className="bg-white px-4 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
@@ -25,15 +29,33 @@ export function Gallery() {
                 index === 0 || index === 5 ? "lg:col-span-2" : ""
               } ${index === 1 ? "lg:row-span-2" : ""}`}
             >
-              <img
-                src={image}
-                alt={`Gallery jajanan pasar ${index + 1}`}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-              />
+              <button
+                type="button"
+                aria-label={`Perbesar gallery jajanan pasar ${index + 1}`}
+                onClick={() =>
+                  setSelectedImage({
+                    src: image,
+                    alt: `Gallery jajanan pasar ${index + 1}`
+                  })
+                }
+                className="block h-full w-full cursor-zoom-in"
+              >
+                <img
+                  src={image}
+                  alt={`Gallery jajanan pasar ${index + 1}`}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </button>
             </motion.div>
           ))}
         </div>
       </div>
+      <ImageLightbox
+        alt={selectedImage?.alt ?? ""}
+        isOpen={selectedImage !== null}
+        onClose={() => setSelectedImage(null)}
+        src={selectedImage?.src ?? ""}
+      />
     </section>
   );
 }

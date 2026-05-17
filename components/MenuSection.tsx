@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import { ImageLightbox } from "@/components/ImageLightbox";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { CartState } from "@/components/HomeClient";
 import { categories, formatPrice, menuItems, type MenuCategory } from "@/data/menu";
@@ -16,6 +17,7 @@ type MenuSectionProps = {
 export function MenuSection({ cart, onAddItem, onDecreaseItem, onOpenCart }: MenuSectionProps) {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>("Semua");
   const [query, setQuery] = useState("");
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const filteredItems = useMemo(() => {
     const keyword = query.trim().toLowerCase();
@@ -89,11 +91,18 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onOpenCart }: Men
                 className="group overflow-hidden rounded-2xl border border-cream-deep/70 bg-cream/35 shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-glow"
               >
                 <div className="relative overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
-                  />
+                  <button
+                    type="button"
+                    aria-label={`Perbesar gambar ${item.name}`}
+                    onClick={() => setSelectedImage({ src: item.image, alt: item.name })}
+                    className="block w-full cursor-zoom-in"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </button>
                   {item.badge ? (
                     <span className="absolute left-4 top-4 rounded-full bg-white/88 px-3 py-1 text-xs font-bold text-leaf shadow-sm backdrop-blur">
                       {item.badge}
@@ -162,6 +171,12 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onOpenCart }: Men
           </div>
         ) : null}
       </div>
+      <ImageLightbox
+        alt={selectedImage?.alt ?? ""}
+        isOpen={selectedImage !== null}
+        onClose={() => setSelectedImage(null)}
+        src={selectedImage?.src ?? ""}
+      />
     </section>
   );
 }
