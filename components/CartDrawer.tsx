@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
-import { formatPrice, storeInfo, type MenuItem, whatsappNumber } from "@/data/menu";
+import { formatPrice, minimumOrderQuantity, storeInfo, type MenuItem, whatsappNumber } from "@/data/menu";
 
 export type CartLine = {
   item: MenuItem;
@@ -15,6 +15,7 @@ type CartDrawerProps = {
   onClose: () => void;
   onAddItem: (productId: string) => void;
   onDecreaseItem: (productId: string) => void;
+  onSetItemQuantity: (productId: string, quantity: number) => void;
   onRemoveItem: (productId: string) => void;
 };
 
@@ -63,10 +64,14 @@ export function CartDrawer({
   onClose,
   onAddItem,
   onDecreaseItem,
+  onSetItemQuantity,
   onRemoveItem
 }: CartDrawerProps) {
   const [customer, setCustomer] = useState<CustomerForm>(initialCustomer);
   const total = cartLines.reduce((sum, line) => sum + line.item.priceValue * line.quantity, 0);
+  const totalQuantity = cartLines.reduce((sum, line) => sum + line.quantity, 0);
+  const remainingQuantity = Math.max(0, minimumOrderQuantity - totalQuantity);
+  const hasMetMinimumOrder = totalQuantity >= minimumOrderQuantity;
   const orderUrl = useMemo(() => buildOrderUrl(cartLines, total, customer), [cartLines, total, customer]);
 
   if (!isOpen) {
@@ -144,7 +149,16 @@ export function CartDrawer({
                           >
                             -
                           </button>
-                          <span className="min-w-8 text-center text-sm font-bold text-charcoal">{line.quantity}</span>
+                          <input
+                            type="text"
+                            inputMode="numeric"
+                            pattern="[0-9]*"
+                            value={line.quantity}
+                            onChange={(event) =>
+                              onSetItemQuantity(line.item.id, Number(event.target.value.replace(/\D/g, "")))
+                            }
+                            className="w-12 bg-transparent text-center text-sm font-bold text-charcoal outline-none"
+                          />
                           <button
                             type="button"
                             onClick={() => onAddItem(line.item.id)}
@@ -159,6 +173,25 @@ export function CartDrawer({
                   </div>
                 </div>
               ))}
+
+              <div
+                className={`rounded-2xl border p-4 shadow-soft ${
+                  hasMetMinimumOrder
+                    ? "border-leaf/20 bg-leaf-soft text-leaf"
+                    : "border-amber-200 bg-amber-50 text-amber-900"
+                }`}
+              >
+                <p className="font-semibold">
+                  {hasMetMinimumOrder
+                    ? `Minimal order terpenuhi: ${totalQuantity} pcs`
+                    : `Minimal order ${minimumOrderQuantity} pcs per pemesanan`}
+                </p>
+                <p className="mt-1 text-sm">
+                  {hasMetMinimumOrder
+                    ? "Pesanan sudah bisa dilanjutkan ke WhatsApp."
+                    : `Tambahkan ${remainingQuantity} pcs lagi sebelum checkout.`}
+                </p>
+              </div>
 
               <div className="rounded-2xl border border-cocoa/10 bg-white/80 p-4 shadow-soft">
                 <h3 className="font-semibold text-charcoal">Data pemesan</h3>
@@ -206,21 +239,31 @@ export function CartDrawer({
             <span className="text-charcoal">Total</span>
             <span className="text-leaf">{formatPrice(total)}</span>
           </div>
-          <a
-            href={cartLines.length ? orderUrl : "#menu"}
-            target={cartLines.length ? "_blank" : undefined}
-            rel={cartLines.length ? "noreferrer" : undefined}
-            onClick={() => {
-              if (!cartLines.length) {
-                onClose();
-              }
-            }}
-            className={`inline-flex w-full items-center justify-center rounded-full px-5 py-4 text-sm font-semibold shadow-glow transition hover:-translate-y-0.5 ${
-              cartLines.length ? "bg-leaf text-white hover:bg-charcoal" : "bg-cocoa/10 text-cocoa hover:bg-white"
-            }`}
-          >
-            {cartLines.length ? "Checkout via WhatsApp" : "Lihat Menu"}
-          </a>
+          {!cartLines.length ? (
+            <button
+              type="button"
+              onClick={onClose}
+              className="inline-flex w-full items-center justify-center rounded-full bg-cocoa/10 px-5 py-4 text-sm font-semibold text-cocoa shadow-glow transition hover:-translate-y-0.5 hover:bg-white"
+            >
+              Lihat Menu
+            </button>
+          ) : hasMetMinimumOrder ? (
+            <a
+              href={orderUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-full items-center justify-center rounded-full bg-leaf px-5 py-4 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-charcoal"
+            >
+              Checkout via WhatsApp
+            </a>
+          ) : (
+            <button
+              type="button"
+              className="inline-flex w-full cursor-not-allowed items-center justify-center rounded-full bg-cocoa/10 px-5 py-4 text-sm font-semibold text-cocoa shadow-glow"
+            >
+              Kurang {remainingQuantity} pcs lagi
+            </button>
+          )}
         </div>
       </motion.aside>
     </div>

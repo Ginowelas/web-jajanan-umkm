@@ -53,6 +53,21 @@ export function HomeClient() {
     });
   }
 
+  function setItemQuantity(productId: string, quantity: number) {
+    setCart((current) => {
+      const next = { ...current };
+      const normalizedQuantity = Number.isFinite(quantity) ? Math.max(0, Math.floor(quantity)) : 0;
+
+      if (normalizedQuantity <= 0) {
+        delete next[productId];
+      } else {
+        next[productId] = normalizedQuantity;
+      }
+
+      return next;
+    });
+  }
+
   function removeItem(productId: string) {
     setCart((current) => {
       const next = { ...current };
@@ -70,6 +85,7 @@ export function HomeClient() {
           cart={cart}
           onAddItem={addItem}
           onDecreaseItem={decreaseItem}
+          onSetItemQuantity={setItemQuantity}
           onOpenCart={() => setIsCartOpen(true)}
         />
         <Packages />
@@ -86,6 +102,7 @@ export function HomeClient() {
         onClose={() => setIsCartOpen(false)}
         onAddItem={addItem}
         onDecreaseItem={decreaseItem}
+        onSetItemQuantity={setItemQuantity}
         onRemoveItem={removeItem}
       />
     </>

@@ -11,10 +11,11 @@ type MenuSectionProps = {
   cart: CartState;
   onAddItem: (productId: string) => void;
   onDecreaseItem: (productId: string) => void;
+  onSetItemQuantity: (productId: string, quantity: number) => void;
   onOpenCart: () => void;
 };
 
-export function MenuSection({ cart, onAddItem, onDecreaseItem, onOpenCart }: MenuSectionProps) {
+export function MenuSection({ cart, onAddItem, onDecreaseItem, onSetItemQuantity, onOpenCart }: MenuSectionProps) {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>("Semua");
   const [query, setQuery] = useState("");
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
@@ -134,13 +135,20 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onOpenCart }: Men
                       >
                         -
                       </button>
-                      <button
-                        type="button"
-                        onClick={onOpenCart}
-                        className="rounded-full bg-leaf px-4 py-3 text-sm font-semibold text-white shadow-glow transition hover:bg-charcoal"
-                      >
-                        {quantity} di Keranjang
-                      </button>
+                      <label className="flex items-center justify-center gap-1 rounded-full bg-leaf px-4 py-2 text-center text-sm font-semibold text-white shadow-glow">
+                        <span className="sr-only">Jumlah {item.name}</span>
+                        <input
+                          type="text"
+                          inputMode="numeric"
+                          pattern="[0-9]*"
+                          value={quantity}
+                          onChange={(event) =>
+                            onSetItemQuantity(item.id, Number(event.target.value.replace(/\D/g, "")))
+                          }
+                          className="w-8 bg-transparent text-center text-sm font-semibold text-white outline-none"
+                        />
+                        <span>pcs</span>
+                      </label>
                       <button
                         type="button"
                         onClick={() => onAddItem(item.id)}

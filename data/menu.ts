@@ -1,12 +1,13 @@
 export const whatsappNumber = "6281226532069";
 export const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+export const minimumOrderQuantity = 20;
 
 export const storeInfo = {
   name: "Warung Mak Menuk",
   address: "Wonosidi Lor, RT 007/RW 012, Wates, Kulon Progo",
   instagram: "@warungmakmenuk",
   whatsappLabel: "0812-2653-2069",
-  minimumOrder: "Minimal order menyesuaikan jenis jajanan dan tanggal acara."
+  minimumOrder: `Minimal order ${minimumOrderQuantity} pcs per pemesanan.`
 };
 
 export type MenuCategory = "Semua" | "Gorengan" | "Kue Basah" | "Ketan" | "Nasi Box";
