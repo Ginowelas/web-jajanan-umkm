@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ImageLightbox } from "@/components/ImageLightbox";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { CartState } from "@/components/HomeClient";
-import { categories, formatPrice, menuItems, type MenuCategory } from "@/data/menu";
+import { categories, formatPrice, menuItems, storeInfo, type MenuCategory, whatsappNumber } from "@/data/menu";
 
 type MenuSectionProps = {
   cart: CartState;
@@ -34,6 +34,15 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onSetItemQuantity
       return categoryMatch && queryMatch;
     });
   }, [activeCategory, query]);
+
+  const customRequestUrl = useMemo(() => {
+    const requestedMenu = query.trim();
+    const message = requestedMenu
+      ? `Halo ${storeInfo.name}, saya ingin menanyakan apakah tersedia menu "${requestedMenu}"?`
+      : `Halo ${storeInfo.name}, saya ingin menanyakan menu lain yang belum tercantum di website.`;
+
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  }, [query]);
 
   return (
     <section id="menu" className="bg-white px-4 py-20 sm:py-24">
@@ -175,7 +184,18 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onSetItemQuantity
         {filteredItems.length === 0 ? (
           <div className="mt-8 rounded-2xl border border-cream-deep bg-cream p-8 text-center shadow-soft">
             <p className="text-lg font-semibold text-charcoal">Menu tidak ditemukan</p>
-            <p className="mt-2 text-sm text-cocoa">Coba gunakan kata kunci atau kategori lain.</p>
+            <p className="mt-2 text-sm leading-6 text-cocoa">
+              Menu yang kamu cari belum ada di daftar. Tanyakan langsung ke WhatsApp, bisa jadi tersedia berdasarkan
+              pesanan khusus atau stok harian.
+            </p>
+            <a
+              href={customRequestUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex items-center justify-center rounded-full bg-leaf px-5 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-charcoal"
+            >
+              Tanyakan via WhatsApp
+            </a>
           </div>
         ) : null}
       </div>
