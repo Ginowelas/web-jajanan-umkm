@@ -68,14 +68,14 @@ export function Hero({ onCartOpen }: HeroProps) {
         >
           <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/45 p-3 shadow-soft backdrop-blur">
             <img
-              src="/images/hero.png"
+              src="/images/hero.jpg"
               alt="Pilihan jajanan pasar tradisional dalam tampah"
               className="h-[390px] w-full rounded-[1.5rem] object-cover sm:h-[520px]"
             />
           </div>
           <div className="absolute bottom-5 left-5 rounded-2xl border border-white/75 bg-white/76 p-4 shadow-soft backdrop-blur-xl">
-            <p className="text-sm font-semibold text-charcoal">Snack box mulai</p>
-            <p className="mt-1 text-2xl font-bold text-leaf">Rp18.000</p>
+            <p className="text-sm font-semibold text-charcoal">Snack Box mulai</p>
+            <p className="mt-1 text-2xl font-bold text-leaf">Rp50.000</p>
           </div>
         </motion.div>
       </div>

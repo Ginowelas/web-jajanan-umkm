@@ -10,7 +10,7 @@ export const storeInfo = {
   minimumOrder: `Minimal order ${minimumOrderQuantity} pcs per pemesanan.`
 };
 
-export type MenuCategory = "Semua" | "Gorengan" | "Kue Basah" | "Ketan" | "Nasi Box";
+export type MenuCategory = "Semua" | "Gorengan" | "Jajanan Manis" | "Jajanan Gurih" | "Nasi Box";
 
 export type MenuItem = {
   id: string;
@@ -33,7 +33,7 @@ export type PackageItem = {
   badge: string;
 };
 
-export const categories: MenuCategory[] = ["Semua", "Gorengan", "Kue Basah", "Ketan", "Nasi Box"];
+export const categories: MenuCategory[] = ["Semua", "Gorengan", "Jajanan Manis", "Jajanan Gurih", "Nasi Box"];
 
 export function formatPrice(value: number) {
   return new Intl.NumberFormat("id-ID", {
@@ -57,8 +57,8 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "lemet",
-    name: "Lemet",
-    category: "Kue Basah",
+    name: "Kue Lemet",
+    category: "Jajanan Manis",
     priceValue: 1500,
     unit: "pcs",
     description: "Singkong parut dan gula merah dibungkus daun pisang dengan rasa manis legit.",
@@ -80,7 +80,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "arem-arem",
     name: "Arem-arem",
-    category: "Nasi Box",
+    category: "Jajanan Gurih",
     priceValue: 2000,
     unit: "pcs",
     description: "Nasi lembut berisi ayam dan sayuran berbumbu, dibungkus daun pisang harum.",
@@ -102,7 +102,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "semar-mendem",
     name: "Semar Mendem",
-    category: "Ketan",
+    category: "Jajanan Gurih",
     priceValue: 2000,
     unit: "pcs",
     description: "Ketan lembut dibalut dadar telur tipis dengan cita rasa tradisional yang nikmat.",
@@ -112,8 +112,8 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "bengawan-solo",
-    name: "Bengawan Solo",
-    category: "Kue Basah",
+    name: "Kue Bengawan Solo",
+    category: "Jajanan Manis",
     priceValue: 2500,
     unit: "pcs",
     description: "Kue lembut dengan rasa manis legit dan taburan kelapa gurih.",
@@ -124,7 +124,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "klepon",
     name: "Klepon",
-    category: "Kue Basah",
+    category: "Jajanan Manis",
     priceValue: 2000,
     unit: "pcs",
     description: "Klepon kenyal dengan isian gula merah lumer dan balutan kelapa parut.",
@@ -135,7 +135,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "donat-meses",
     name: "Donat Meses",
-    category: "Gorengan",
+    category: "Jajanan Manis",
     priceValue: 2500,
     unit: "pcs",
     description: "Donat lembut dengan lapisan cokelat manis dan taburan meses melimpah, menghadirkan rasa klasik yang lezat dan bikin nagih.",
@@ -157,7 +157,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "dadar-gulung-keju",
     name: "Dadar Gulung Keju",
-    category: "Kue Basah",
+    category: "Jajanan Manis",
     priceValue: 2000,
     unit: "pcs",
     description: "Dadar gulung pandan yang lembut dengan taburan keju gurih, perpaduan manis dan lezat yang cocok dinikmati kapan saja.",
@@ -168,7 +168,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "kue-lapis",
     name: "Kue Lapis",
-    category: "Kue Basah",
+    category: "Jajanan Manis",
     priceValue: 2000,
     unit: "pcs",
     description: "Kue lapis lembut dengan tekstur kenyal dan rasa manis yang pas, hadir dengan aroma pandan khas yang menggugah selera.",
@@ -179,12 +179,45 @@ export const menuItems: MenuItem[] = [
   {
     id: "kue-apem",
     name: "Kue Apem",
-    category: "Kue Basah",
+    category: "Jajanan Manis",
     priceValue: 2000,
     unit: "pcs",
     description: "Apem lembut dengan rasa manis khas dan aroma harum yang menggoda, cocok dinikmati sebagai camilan tradisional kapan saja.",
     image: "/images/apem.jpg",
     badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "bolu-pelangi",
+    name: "Bolu Pelangi",
+    category: "Jajanan Manis",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Bolu pelangi lembut dengan lapisan warna-warni cantik dan rasa manis yang lezat, cocok menjadi camilan spesial untuk segala suasana.",
+    image: "/images/bolu-pelangi.jpg",
+    badge: "Favorit",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "nasi-kuning",
+    name: "Nasi Kuning",
+    category: "Nasi Box",
+    priceValue: 7000,
+    unit: "pcs",
+    description: "Nasi kuning gurih dengan aroma rempah dan santan khas, disajikan lengkap dengan aneka lauk lezat yang cocok untuk sarapan maupun acara spesial.",
+    image: "/images/nasi-kuning.jpg",
+    badge: "Best Seller",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "kacang-telur",
+    name: "Kacang Telur",
+    category: "Jajanan Gurih",
+    priceValue: 1000,
+    unit: "pcs",
+    description: "Kacang telur renyah dengan balutan bumbu gurih manis yang khas, cocok menjadi camilan favorit untuk dinikmati kapan saja.",
+    image: "/images/kacang-telur.jpg",
+    badge: "Favorit",
     minOrder: "Min. 20 pcs"
   },
 ];
