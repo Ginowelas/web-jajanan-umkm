@@ -62,7 +62,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 1500,
     unit: "pcs",
     description: "Singkong parut dan gula merah dibungkus daun pisang dengan rasa manis legit.",
-    image: "/images/lemet.jpg",
+    image: "/images/lemet.png",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -84,7 +84,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Nasi lembut berisi ayam dan sayuran berbumbu, dibungkus daun pisang harum.",
-    image: "/images/arem-arem.jpg",
+    image: "/images/arem-arem.png",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -95,7 +95,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Martabak mini renyah dengan isian telur dan daun bawang berbumbu gurih.",
-    image: "/images/martabak.jpg",
+    image: "/images/martabak.png",
     badge: "Paling Banyak Disukai",
     minOrder: "Min. 20 pcs"
   },
@@ -106,7 +106,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Ketan lembut dibalut dadar telur tipis dengan cita rasa tradisional yang nikmat.",
-    image: "/images/semar-mendem.jpg",
+    image: "/images/semar-mendem.png",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -117,7 +117,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2500,
     unit: "pcs",
     description: "Kue lembut dengan rasa manis legit dan taburan kelapa gurih.",
-    image: "/images/bengawan-solo.jpg",
+    image: "/images/bengawan-solo.png",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -128,7 +128,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Klepon kenyal dengan isian gula merah lumer dan balutan kelapa parut.",
-    image: "/images/klepon.jpg",
+    image: "/images/klepon.png",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -139,7 +139,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2500,
     unit: "pcs",
     description: "Donat lembut dengan lapisan cokelat manis dan taburan meses melimpah, menghadirkan rasa klasik yang lezat dan bikin nagih.",
-    image: "/images/donat-meses.jpg",
+    image: "/images/donat-meses.png",
     badge: "Best Seller",
     minOrder: "Min. 20 pcs"
   },
@@ -150,7 +150,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2500,
     unit: "pcs",
     description: "Kroket kentang renyah dengan isian sayuran berbumbu gurih, lembut di dalam dan nikmat disantap hangat kapan saja.",
-    image: "/images/kroket.jpg",
+    image: "/images/kroket.png",
     badge: "Best Seller",
     minOrder: "Min. 20 pcs"
   },
@@ -161,7 +161,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Dadar gulung pandan yang lembut dengan taburan keju gurih, perpaduan manis dan lezat yang cocok dinikmati kapan saja.",
-    image: "/images/dadar-gulung-keju.jpg",
+    image: "/images/dadar-gulung-keju.png",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -172,7 +172,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Kue lapis lembut dengan tekstur kenyal dan rasa manis yang pas, hadir dengan aroma pandan khas yang menggugah selera.",
-    image: "/images/lapis.jpg",
+    image: "/images/lapis.png",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -183,7 +183,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Apem lembut dengan rasa manis khas dan aroma harum yang menggoda, cocok dinikmati sebagai camilan tradisional kapan saja.",
-    image: "/images/apem.jpg",
+    image: "/images/apem.png",
     badge: "Fresh Harian",
     minOrder: "Min. 20 pcs"
   },
@@ -194,7 +194,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 2000,
     unit: "pcs",
     description: "Bolu pelangi lembut dengan lapisan warna-warni cantik dan rasa manis yang lezat, cocok menjadi camilan spesial untuk segala suasana.",
-    image: "/images/bolu-pelangi.jpg",
+    image: "/images/bolu-pelangi.png",
     badge: "Favorit",
     minOrder: "Min. 20 pcs"
   },
@@ -205,7 +205,7 @@ export const menuItems: MenuItem[] = [
     priceValue: 7000,
     unit: "pcs",
     description: "Nasi kuning gurih dengan aroma rempah dan santan khas, disajikan lengkap dengan aneka lauk lezat yang cocok untuk sarapan maupun acara spesial.",
-    image: "/images/nasi-kuning.jpg",
+    image: "/images/nasi-kuning.png",
     badge: "Best Seller",
     minOrder: "Min. 20 pcs"
   },
@@ -216,8 +216,118 @@ export const menuItems: MenuItem[] = [
     priceValue: 1000,
     unit: "pcs",
     description: "Kacang telur renyah dengan balutan bumbu gurih manis yang khas, cocok menjadi camilan favorit untuk dinikmati kapan saja.",
-    image: "/images/kacang-telur.jpg",
+    image: "/images/kacang-telur.png",
     badge: "Favorit",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "putu-ayu",
+    name: "Kue Putu Ayu",
+    category: "Jajanan Manis",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Putu ayu lembut dengan aroma pandan khas dan taburan kelapa gurih, menghadirkan rasa manis tradisional yang nikmat di setiap gigitan.",
+    image: "/images/putu-ayu.png",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "jadah-tempe",
+    name: "Jadah Tempe",
+    category: "Jajanan Gurih",
+    priceValue: 3000,
+    unit: "pcs",
+    description: "Jadah tempe khas tradisional dengan perpaduan ketan lembut dan tempe bacem manis gurih, menghadirkan cita rasa sederhana yang nikmat dan mengenyangkan.",
+    image: "/images/jadah-tempe.png",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "piscok",
+    name: "Pisang Cokelat / Pisang Aroma",
+    category: "Jajanan Manis",
+    priceValue: 1500,
+    unit: "pcs",
+    description: "Pisang cokelat renyah dengan perpaduan pisang manis dan cokelat lumer di dalamnya, cocok menjadi camilan lezat untuk segala suasana.",
+    image: "/images/piscok.png",
+    badge: "Best Seller",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "roti-pizza",
+    name: "Pizza Mini",
+    category: "Jajanan Gurih",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Roti pizza mini lembut dengan topping sosis, keju, dan jagung manis berpadu saus gurih, cocok menjadi camilan praktis yang lezat dan mengenyangkan.",
+    image: "/images/roti-pizza.png",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "carang-gesing",
+    name: "Carang Gesing",
+    category: "Jajanan Manis",
+    priceValue: 3000,
+    unit: "pcs",
+    description: "Jajanan tradisional berbahan pisang, santan, dan gula yang dikukus dalam daun pisang, menghadirkan rasa manis legit dan aroma khas yang lembut dan nikmat.",
+    image: "/images/carang-gesing.png",
+    badge: "Best Seller",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "coro-bikang",
+    name: "Coro Bikang",
+    category: "Jajanan Manis",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Kue tradisional berbahan tepung beras dan santan dengan bentuk mekar cantik, bertekstur lembut, serta rasa manis gurih khas jajanan tradisional.",
+    image: "/images/coro-bikang.png",
+    badge: "Best Seller",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "talam",
+    name: "Kue Talam",
+    category: "Jajanan Manis",
+    priceValue: 1500,
+    unit: "pcs",
+    description: "Kue tradisional berbahan tepung beras dan santan dengan tekstur lembut, legit, dan rasa manis gurih yang khas.",
+    image: "/images/talam.png",
+    badge: "Favorit",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "apem-panda",
+    name: "Kue Apem Panda",
+    category: "Jajanan Manis",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Kue apem lembut dengan rasa manis khas dan bentuk lucu menyerupai karakter panda, cocok untuk camilan dan sajian acara spesial.",
+    image: "/images/apem-panda.png",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "bomboloni",
+    name: "Roti Bomboloni",
+    category: "Jajanan Manis",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Donat lembut khas Italia dengan tekstur empuk dan isian manis yang lumer, cocok dinikmati sebagai camilan atau teman minum kopi.",
+    image: "/images/bomboloni.png",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "sus-buah",
+    name: "Sus Buah",
+    category: "Jajanan Manis",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Sus buah lembut dengan isian vla manis dan topping buah segar, menghadirkan perpaduan rasa creamy, manis, dan menyegarkan dalam setiap gigitan.",
+    image: "/images/sus-buah.png",
+    badge: "Best Seller",
     minOrder: "Min. 20 pcs"
   },
 ];

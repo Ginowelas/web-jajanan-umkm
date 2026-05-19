@@ -68,7 +68,7 @@ export function Hero({ onCartOpen }: HeroProps) {
         >
           <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/45 p-3 shadow-soft backdrop-blur">
             <img
-              src="/images/HERO.jpg"
+              src="/images/HERO.png"
               alt="Pilihan jajanan pasar tradisional dalam tampah"
               className="h-[390px] w-full rounded-[1.5rem] object-cover sm:h-[520px]"
             />
