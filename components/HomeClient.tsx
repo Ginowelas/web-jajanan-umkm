@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { CartDrawer, type CartLine } from "@/components/CartDrawer";
+import { CustomOrderSection } from "@/components/CustomOrderSection";
 import { FAQ } from "@/components/FAQ";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
@@ -88,6 +89,7 @@ export function HomeClient() {
           onSetItemQuantity={setItemQuantity}
           onOpenCart={() => setIsCartOpen(true)}
         />
+        <CustomOrderSection />
         <Packages />
         <Reasons />
         <Testimonials />

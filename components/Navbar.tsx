@@ -6,6 +6,7 @@ import { whatsappUrl } from "@/data/menu";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Menu", href: "#menu" },
+  { label: "Custom", href: "#custom" },
   { label: "Paket", href: "#paket" },
   { label: "Tentang", href: "#tentang" },
   { label: "Kontak", href: "#kontak" }

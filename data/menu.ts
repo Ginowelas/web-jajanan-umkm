@@ -33,6 +33,25 @@ export type PackageItem = {
   badge: string;
 };
 
+export type CustomOption = {
+  label: string;
+  priceAdjustment: number;
+};
+
+export type CustomOrderProduct = {
+  id: string;
+  name: string;
+  category: string;
+  priceFrom: number;
+  unit: string;
+  minQuantity: number;
+  description: string;
+  image: string;
+  badge: string;
+  models: CustomOption[];
+  toppings: CustomOption[];
+};
+
 export const categories: MenuCategory[] = ["Semua", "Gorengan", "Jajanan Manis", "Jajanan Gurih", "Nasi Box"];
 
 export function formatPrice(value: number) {
@@ -356,6 +375,61 @@ export const snackPackages: PackageItem[] = [
     description: "Isi lebih lengkap untuk acara besar dengan tampilan premium.",
     items: ["5 jajanan pilihan", "Custom isi box", "Bisa tambah kartu ucapan"],
     badge: "Custom"
+  }
+];
+
+export const customOrderProducts: CustomOrderProduct[] = [
+  {
+    id: "nasi-kuning-custom",
+    name: "Nasi Kuning Custom",
+    category: "Nasi Box Custom",
+    priceFrom: 18000,
+    unit: "box",
+    minQuantity: 20,
+    description:
+      "Nasi kuning bisa disesuaikan bentuk, lauk, topping, dan tema acara. Harga final menyesuaikan detail permintaan.",
+    image: "/images/nasi-kuning.png",
+    badge: "Bisa Bentuk Karakter",
+    models: [
+      { label: "Standar box", priceAdjustment: 0 },
+      { label: "Bentuk karakter sederhana", priceAdjustment: 3000 },
+      { label: "Tumpeng mini", priceAdjustment: 5000 },
+      { label: "Custom tema acara", priceAdjustment: 7000 }
+    ],
+    toppings: [
+      { label: "Ayam suwir", priceAdjustment: 2500 },
+      { label: "Telur dadar iris", priceAdjustment: 1500 },
+      { label: "Kering tempe", priceAdjustment: 1500 },
+      { label: "Abon", priceAdjustment: 2000 },
+      { label: "Perkedel", priceAdjustment: 2500 },
+      { label: "Stiker nama/acara", priceAdjustment: 1000 }
+    ]
+  },
+  {
+    id: "snack-box-custom",
+    name: "Snack Box Custom",
+    category: "Snack Box Custom",
+    priceFrom: 18000,
+    unit: "box",
+    minQuantity: 20,
+    description:
+      "Isi snack box dapat disesuaikan dengan budget, tema, dan kebutuhan acara keluarga, kantor, arisan, atau hajatan.",
+    image: "/images/HERO.png",
+    badge: "Isi Bisa Disesuaikan",
+    models: [
+      { label: "Box kraft standar", priceAdjustment: 0 },
+      { label: "Box premium transparan", priceAdjustment: 2000 },
+      { label: "Box dengan label acara", priceAdjustment: 1500 },
+      { label: "Paket premium plus kartu ucapan", priceAdjustment: 3000 }
+    ],
+    toppings: [
+      { label: "Tambah 1 jajanan manis", priceAdjustment: 2500 },
+      { label: "Tambah 1 jajanan gurih", priceAdjustment: 2500 },
+      { label: "Air mineral gelas", priceAdjustment: 1000 },
+      { label: "Tisu/sendok", priceAdjustment: 500 },
+      { label: "Kartu ucapan", priceAdjustment: 1000 },
+      { label: "Request warna tema", priceAdjustment: 1000 }
+    ]
   }
 ];
 
