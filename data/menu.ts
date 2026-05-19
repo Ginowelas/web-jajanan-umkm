@@ -114,7 +114,7 @@ export const menuItems: MenuItem[] = [
     id: "bengawan-solo",
     name: "Kue Bengawan Solo",
     category: "Jajanan Manis",
-    priceValue: 2500,
+    priceValue: 1500,
     unit: "pcs",
     description: "Kue lembut dengan rasa manis legit dan taburan kelapa gurih.",
     image: "/images/bengawan-solo.png",

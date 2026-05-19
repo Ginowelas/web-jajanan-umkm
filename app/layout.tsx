@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     "risoles"
   ],
   openGraph: {
-    title: "Jajanan Pagi | Order Jajanan Pasar dan Snack Box",
-    description: "Pesan jajanan pasar dan snack box fresh harian untuk arisan, hajatan, kantor, dan acara keluarga.",
+    title: "Warung Mak Menuk | Order Jajanan Pasar dan Nasi Box",
+    description: "Pesan jajanan pasar dan Nasi box fresh harian untuk arisan, hajatan, kantor, dan acara keluarga.",
     type: "website",
     locale: "id_ID"
   }
