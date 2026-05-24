@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { CartIcon, WhatsAppIcon } from "@/components/Icons";
 import { whatsappUrl } from "@/data/menu";
 
 const navItems = [
@@ -51,9 +52,11 @@ export function Navbar({ cartCount = 0, onCartOpen }: NavbarProps) {
           <button
             type="button"
             onClick={onCartOpen}
-            className="relative rounded-full border border-cocoa/10 bg-white px-4 py-2 text-sm font-semibold text-cocoa shadow-sm transition hover:-translate-y-0.5 hover:border-leaf hover:text-leaf"
+            aria-label="Buka keranjang"
+            title="Keranjang"
+            className="relative grid size-11 place-items-center rounded-full border border-cocoa/10 bg-white text-cocoa shadow-sm transition hover:-translate-y-0.5 hover:border-leaf hover:text-leaf"
           >
-            Keranjang
+            <CartIcon className="size-5" />
             {cartCount > 0 ? (
               <span className="absolute -right-2 -top-2 grid size-6 place-items-center rounded-full bg-leaf text-xs font-bold text-white">
                 {cartCount}
@@ -64,9 +67,11 @@ export function Navbar({ cartCount = 0, onCartOpen }: NavbarProps) {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="hidden rounded-full bg-charcoal px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-leaf sm:inline-flex"
+            aria-label="Pesan via WhatsApp"
+            title="WhatsApp"
+            className="hidden size-11 items-center justify-center rounded-full bg-charcoal text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-leaf sm:inline-flex"
           >
-            WhatsApp
+            <WhatsAppIcon className="size-5" />
           </a>
         </div>
       </nav>

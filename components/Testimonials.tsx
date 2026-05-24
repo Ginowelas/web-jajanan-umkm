@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { StarIcon } from "@/components/Icons";
 import { SectionHeading } from "@/components/SectionHeading";
 import { testimonials } from "@/data/menu";
 
@@ -24,7 +25,14 @@ export function Testimonials() {
               transition={{ duration: 0.45, delay: index * 0.06, ease: "easeOut" }}
               className="rounded-2xl border border-cream-deep bg-cream/45 p-6 shadow-soft"
             >
-              <p className="mb-5 text-sm font-bold uppercase text-leaf">Rating 5/5</p>
+              <div className="mb-5 flex items-center gap-2">
+                <div className="flex items-center gap-1 text-amber-400">
+                  {Array.from({ length: 5 }).map((_, starIndex) => (
+                    <StarIcon key={starIndex} className="size-5" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-leaf">5/5</span>
+              </div>
               <blockquote className="text-base leading-7 text-charcoal">"{item.quote}"</blockquote>
               <figcaption className="mt-6">
                 <p className="font-semibold text-charcoal">{item.name}</p>

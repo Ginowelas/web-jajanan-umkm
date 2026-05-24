@@ -132,7 +132,6 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onSetItemQuantity
                   <p className="min-h-24 text-sm leading-6 text-cocoa">{item.description}</p>
                   <div className="mt-4 flex items-center justify-between gap-3 text-xs font-semibold text-cocoa">
                     <span>{item.minOrder ?? "Bisa masuk snack box"}</span>
-                    <span>/ {item.unit}</span>
                   </div>
 
                   {quantity > 0 ? (
