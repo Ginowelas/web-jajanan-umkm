@@ -6,8 +6,8 @@ export const storeInfo = {
   name: "Warung Mak Menuk",
   address: "Wonosidi Lor, RT 007/RW 012, Wates, Kulon Progo",
   instagram: "@warungmakmenuk",
-  instagramUrl: "https://instagram.com/warungmakmenuk",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Wonosidi%20Lor%20RT%20007%20RW%20012%20Wates%20Kulon%20Progo",
+  instagramUrl: "https://instagram.com/@warungmakmenuk",
+  mapsUrl: "https://maps.app.goo.gl/SKc4TVmwMdfGU9ob8",
   whatsappLabel: "0812-2653-2069",
   minimumOrder: `Minimal order ${minimumOrderQuantity} pcs per pemesanan.`
 };
@@ -74,7 +74,7 @@ export const menuItems: MenuItem[] = [
     description: "Risol renyah berisi sosis, telur, dan mayones creamy lumer di setiap gigitan.",
     image: "/images/risol-mayo.jpg",
     badge: "Best Seller",
-    minOrder: "Min. 20"
+    minOrder: "Min. 20 pcs"
   },
   {
     id: "lemet",
