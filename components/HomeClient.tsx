@@ -6,7 +6,6 @@ import { CustomOrderSection } from "@/components/CustomOrderSection";
 import { FAQ } from "@/components/FAQ";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
-import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
 import { MenuSection } from "@/components/MenuSection";
 import { Navbar } from "@/components/Navbar";
@@ -93,7 +92,6 @@ export function HomeClient() {
         <Packages />
         <Reasons />
         <Testimonials />
-        <Gallery />
         <FAQ />
       </main>
       <Footer />
