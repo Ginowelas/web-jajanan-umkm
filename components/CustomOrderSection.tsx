@@ -169,7 +169,7 @@ export function CustomOrderSection() {
                 <p className="text-sm font-semibold uppercase text-leaf">Form Custom Order</p>
                 <h3 className="mt-1 text-2xl font-semibold text-charcoal">{selectedProduct.name}</h3>
                 <p className="mt-2 text-sm leading-6 text-cocoa">
-                  Isi detailnya dulu ya, nanti pesan WhatsApp akan otomatis tersusun rapi.
+                  Isi detailnya dulu ya, nanti pesanan akan otomatis tersusun rapi.
                 </p>
               </div>
               <div className="rounded-2xl bg-white px-4 py-3 text-left shadow-soft sm:text-right">

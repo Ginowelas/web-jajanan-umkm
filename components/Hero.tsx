@@ -48,8 +48,8 @@ export function Hero({ onCartOpen }: HeroProps) {
           </div>
           <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
             {[
-              ["10+", "Menu favorit"],
-              ["20+", "Snack dan Nasi Box"],
+              ["10+", "Menu Favorit"],
+              ["25+", "Pilihan Snack dan Nasi Box"],
               ["Fresh", "Setiap Hari"]
             ].map(([value, label]) => (
               <div key={label} className="rounded-2xl border border-white/70 bg-white/60 p-4 shadow-soft backdrop-blur">
@@ -75,7 +75,7 @@ export function Hero({ onCartOpen }: HeroProps) {
           </div>
           <div className="absolute bottom-5 left-5 rounded-2xl border border-white/75 bg-white/76 p-4 shadow-soft backdrop-blur-xl">
             <p className="text-sm font-semibold text-charcoal">Snack Box mulai</p>
-            <p className="mt-1 text-2xl font-bold text-leaf">Rp 20.000-,</p>
+            <p className="mt-1 text-2xl font-bold text-leaf">Rp 20.000 an</p>
           </div>
         </motion.div>
       </div>
