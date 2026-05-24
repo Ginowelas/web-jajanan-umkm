@@ -6,17 +6,14 @@ export function CartIcon({ className = "size-5" }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
-        d="M6.5 8.5h11l-.75 10.25A2.5 2.5 0 0 1 14.26 21H9.74a2.5 2.5 0 0 1-2.49-2.25L6.5 8.5Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M9 8.5V7a3 3 0 0 1 6 0v1.5"
+        d="M3.5 4.5h2l2.1 10.4a2 2 0 0 0 2 1.6h6.8a2 2 0 0 0 1.9-1.35l1.4-4.15H7"
         stroke="currentColor"
         strokeWidth="1.8"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
+      <path d="M9.5 20a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Z" fill="currentColor" />
+      <path d="M17 20a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Z" fill="currentColor" />
     </svg>
   );
 }
