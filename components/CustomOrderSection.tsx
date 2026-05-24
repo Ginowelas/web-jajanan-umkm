@@ -108,9 +108,9 @@ export function CustomOrderSection() {
     <section id="custom" className="bg-white px-4 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Pesanan Custom"
-          title="Atur bentuk, isi, topping, dan budget sesuai acara"
-          description="Cocok untuk nasi kuning karakter, snack box custom, ulang tahun, arisan, kantor, dan hajatan. Harga final tetap dikonfirmasi admin melalui WhatsApp."
+          eyebrow="Bisa Pesan Custom Disini"
+          title="Atur bentuk, isi, topping, dan budget sesuai selera"
+          description="Untuk Nasi Box karakter dan Snack Box custom. Harga final tetap dikonfirmasi admin melalui WhatsApp."
         />
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.35fr] lg:items-start">
@@ -169,13 +169,13 @@ export function CustomOrderSection() {
                 <p className="text-sm font-semibold uppercase text-leaf">Form Custom Order</p>
                 <h3 className="mt-1 text-2xl font-semibold text-charcoal">{selectedProduct.name}</h3>
                 <p className="mt-2 text-sm leading-6 text-cocoa">
-                  Isi detailnya dulu, nanti pesan WhatsApp otomatis tersusun rapi.
+                  Isi detailnya dulu ya, nanti pesan WhatsApp akan otomatis tersusun rapi.
                 </p>
               </div>
               <div className="rounded-2xl bg-white px-4 py-3 text-left shadow-soft sm:text-right">
-                <p className="text-xs font-semibold uppercase text-cocoa">Estimasi</p>
+                <p className="text-xs font-semibold uppercase text-cocoa">Estimasi Sekitar</p>
                 <p className="text-xl font-bold text-leaf">{formatPrice(estimatedTotal)}</p>
-                <p className="text-xs font-semibold text-cocoa">final via admin</p>
+                <p className="text-xs font-semibold text-cocoa">harga final</p>
               </div>
             </div>
 
@@ -218,7 +218,7 @@ export function CustomOrderSection() {
 
               <div>
                 <label className="text-sm font-semibold text-charcoal" htmlFor="custom-model">
-                  Model / bentuk / kemasan
+                  Pilih model / bentuk / kemasan
                 </label>
                 <select
                   id="custom-model"
@@ -295,7 +295,7 @@ export function CustomOrderSection() {
                 </div>
                 <p className="mt-3 text-xs leading-5 text-cocoa">
                   Harga ini estimasi dari pilihan di website. Admin akan konfirmasi ulang sesuai stok, bentuk, dan
-                  tingkat detail custom.
+                  tingkat detail custom ya.
                 </p>
               </div>
 

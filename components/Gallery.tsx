@@ -15,7 +15,7 @@ export function Gallery() {
         <SectionHeading
           eyebrow="Gallery"
           title="Tampilan hangat untuk meja acara dan hantaran"
-          description="Gunakan area ini untuk foto snack box, proses produksi, atau dokumentasi pesanan pelanggan."
+          description="Snack Box, Proses produksi, atau dokumentasi pesanan pelanggan."
         />
         <div className="grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {galleryImages.map((image, index) => (

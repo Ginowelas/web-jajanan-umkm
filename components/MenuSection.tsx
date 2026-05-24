@@ -50,7 +50,7 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onSetItemQuantity
         <SectionHeading
           eyebrow="Mana Menu Favoritmu?"
           title="Pilih jajanan, masukkan keranjang, checkout langsung ke WhatsApp"
-          description="Harga otomatis dihitung dan detail pesanan akan tersusun rapi saat dikirim ke WhatsApp."
+          description="Harga dan detail pesanan akan dihitung secara otomatis saat dikirim ke WhatsApp."
         />
 
         <div className="mb-8 flex flex-col gap-4 rounded-2xl border border-cream-deep bg-cream/45 p-4 shadow-soft backdrop-blur lg:flex-row lg:items-center lg:justify-between">
@@ -184,8 +184,7 @@ export function MenuSection({ cart, onAddItem, onDecreaseItem, onSetItemQuantity
           <div className="mt-8 rounded-2xl border border-cream-deep bg-cream p-8 text-center shadow-soft">
             <p className="text-lg font-semibold text-charcoal">Menu tidak ditemukan</p>
             <p className="mt-2 text-sm leading-6 text-cocoa">
-              Menu yang kamu cari belum ada di daftar. Tanyakan langsung ke WhatsApp, bisa jadi tersedia berdasarkan
-              pesanan khusus atau stok harian.
+              Menu yang kamu cari belum ada di daftar nih. Tanyakan langsung ke WhatsApp ya, bisa jadi tersedia.
             </p>
             <a
               href={customRequestUrl}

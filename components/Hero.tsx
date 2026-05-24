@@ -27,7 +27,7 @@ export function Hero({ onCartOpen }: HeroProps) {
             Jajanan Pasar Tradisional & Nasi Box, Fresh Setiap Hari
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-cocoa sm:text-xl">
-            Menerima pesanan snack & nasi box untuk arisan, hajatan, kantor, dan acara keluarga.
+            Menerima pesanan Snack & Nasi Box untuk arisan, hajatan, kantor, dan acara keluarga.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -48,8 +48,8 @@ export function Hero({ onCartOpen }: HeroProps) {
           </div>
           <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
             {[
-              ["99+", "Menu favorit"],
-              ["99+", "Snack dan Nasi Box"],
+              ["10+", "Menu favorit"],
+              ["20+", "Snack dan Nasi Box"],
               ["Fresh", "Setiap Hari"]
             ].map(([value, label]) => (
               <div key={label} className="rounded-2xl border border-white/70 bg-white/60 p-4 shadow-soft backdrop-blur">
@@ -75,7 +75,7 @@ export function Hero({ onCartOpen }: HeroProps) {
           </div>
           <div className="absolute bottom-5 left-5 rounded-2xl border border-white/75 bg-white/76 p-4 shadow-soft backdrop-blur-xl">
             <p className="text-sm font-semibold text-charcoal">Snack Box mulai</p>
-            <p className="mt-1 text-2xl font-bold text-leaf">20k</p>
+            <p className="mt-1 text-2xl font-bold text-leaf">Rp 20.000-,</p>
           </div>
         </motion.div>
       </div>
