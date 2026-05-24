@@ -199,7 +199,7 @@ export const menuItems: MenuItem[] = [
     id: "kue-apem",
     name: "Kue Apem",
     category: "Jajanan Manis",
-    priceValue: 2000,
+    priceValue: 1500,
     unit: "pcs",
     description: "Apem lembut dengan rasa manis khas dan aroma harum yang menggoda, cocok dinikmati sebagai camilan tradisional kapan saja.",
     image: "/images/apem.png",
@@ -243,7 +243,7 @@ export const menuItems: MenuItem[] = [
     id: "putu-ayu",
     name: "Kue Putu Ayu",
     category: "Jajanan Manis",
-    priceValue: 2500,
+    priceValue: 1500,
     unit: "pcs",
     description: "Putu ayu lembut dengan aroma pandan khas dan taburan kelapa gurih, menghadirkan rasa manis tradisional yang nikmat di setiap gigitan.",
     image: "/images/putu-ayu.png",
@@ -349,15 +349,37 @@ export const menuItems: MenuItem[] = [
     badge: "Best Seller",
     minOrder: "Min. 20 pcs"
   },
+  {
+    id: "kue-ku",
+    name: "Kue Ku Aneka Bentuk",
+    category: "Jajanan Manis",
+    priceValue: 2500,
+    unit: "pcs",
+    description: "Kue Ku aneka bentuk berbahan tepung ketan dengan isian kacang hijau manis, hadir dalam warna-warni menarik dengan tekstur kenyal lembut dan cita rasa manis legit yang khas.",
+    image: "/images/kue-ku.png",
+    badge: "Favorit",
+    minOrder: "Min. 20 pcs"
+  },
+  {
+    id: "putri-mandi",
+    name: "Putri Mandi",
+    category: "Jajanan Manis",
+    priceValue: 2000,
+    unit: "pcs",
+    description: "Kue tradisional berbahan tepung ketan dengan isian manis, disajikan bersama kuah santan gurih yang lembut menghadirkan perpaduan rasa legit, kenyal, dan creamy.",
+    image: "/images/putri-mandi.png",
+    badge: "Fresh Harian",
+    minOrder: "Min. 20 pcs"
+  },
 ];
 
 export const snackPackages: PackageItem[] = [
   {
     id: "paket-arisan",
     name: "Paket Arisan",
-    priceValue: 18000,
+    priceValue: 20000,
     description: "Komposisi ringan untuk suguhan tamu dan acara keluarga.",
-    items: ["3 jajanan pilihan", "Box kraft premium", "Label nama acara"],
+    items: ["5 Jajanan Pilihan", "Packingan Rapi"],
     badge: "Populer"
   },
   {
@@ -381,54 +403,27 @@ export const snackPackages: PackageItem[] = [
 export const customOrderProducts: CustomOrderProduct[] = [
   {
     id: "nasi-kuning-custom",
-    name: "Nasi Kuning Custom",
-    category: "Nasi Box Custom",
-    priceFrom: 18000,
+    name: "Nasi Kuning",
+    category: "Nasi Box",
+    priceFrom: 5000,
     unit: "box",
     minQuantity: 20,
     description:
-      "Nasi kuning bisa disesuaikan bentuk, lauk, topping, dan tema acara. Harga final menyesuaikan detail permintaan.",
+      "Bisa disesuaikan bentuk, lauk dan topping. Harga final menyesuaikan detail permintaan.",
     image: "/images/nasi-kuning.png",
-    badge: "Bisa Bentuk Karakter",
+    badge: "Bisa Request Bentuk",
     models: [
-      { label: "Standar box", priceAdjustment: 0 },
-      { label: "Bentuk karakter sederhana", priceAdjustment: 3000 },
-      { label: "Tumpeng mini", priceAdjustment: 5000 },
-      { label: "Custom tema acara", priceAdjustment: 7000 }
+      { label: "Model Biasa + Mika Kecil", priceAdjustment: 0 },
+      { label: "Model Biasa + Mika Sedang", priceAdjustment: 3000 },
+      { label: "Bentuk Karakter + Mika Kecil", priceAdjustment: 0 },
+      { label: "Bentuk Karakter + Mika Sedang", priceAdjustment: 3000 }
     ],
     toppings: [
-      { label: "Ayam suwir", priceAdjustment: 2500 },
-      { label: "Telur dadar iris", priceAdjustment: 1500 },
-      { label: "Kering tempe", priceAdjustment: 1500 },
-      { label: "Abon", priceAdjustment: 2000 },
-      { label: "Perkedel", priceAdjustment: 2500 },
-      { label: "Stiker nama/acara", priceAdjustment: 1000 }
-    ]
-  },
-  {
-    id: "snack-box-custom",
-    name: "Snack Box Custom",
-    category: "Snack Box Custom",
-    priceFrom: 18000,
-    unit: "box",
-    minQuantity: 20,
-    description:
-      "Isi snack box dapat disesuaikan dengan budget, tema, dan kebutuhan acara keluarga, kantor, arisan, atau hajatan.",
-    image: "/images/HERO.png",
-    badge: "Isi Bisa Disesuaikan",
-    models: [
-      { label: "Box kraft standar", priceAdjustment: 0 },
-      { label: "Box premium transparan", priceAdjustment: 2000 },
-      { label: "Box dengan label acara", priceAdjustment: 1500 },
-      { label: "Paket premium plus kartu ucapan", priceAdjustment: 3000 }
-    ],
-    toppings: [
-      { label: "Tambah 1 jajanan manis", priceAdjustment: 2500 },
-      { label: "Tambah 1 jajanan gurih", priceAdjustment: 2500 },
-      { label: "Air mineral gelas", priceAdjustment: 1000 },
-      { label: "Tisu/sendok", priceAdjustment: 500 },
-      { label: "Kartu ucapan", priceAdjustment: 1000 },
-      { label: "Request warna tema", priceAdjustment: 1000 }
+      { label: "Abon", priceAdjustment: 0 },
+      { label: "Telur Dadar Iris", priceAdjustment: 0 },
+      { label: "Kering Tempe", priceAdjustment: 0 },
+      { label: "Nugget Ayam", priceAdjustment: 0 },
+      { label: "Stiker", priceAdjustment: 0 }
     ]
   }
 ];
